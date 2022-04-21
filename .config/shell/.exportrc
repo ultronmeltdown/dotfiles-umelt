@@ -1,0 +1,83 @@
+# .exportrc
+
+# Adds `~/.local/bin` to $PATH
+export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
+export PATH="$PATH:/snap/bin"
+export PATH="$PATH:$HOME/.nix-profile/bin"
+export PATH="$PATH:$HOME/.local/share/go/bin"
+export PATH="$PATH:$HOME/.r2env/bin"
+export PATH="$PATH:/home/linuxbrew/.linuxbrew/sbin"
+export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin"
+export PATH="$PATH:/opt/swift/usr/bin"
+
+# Nixpkg
+[ -f "$HOME/.nix-profile/etc/profile.d/nix.sh" ] && . "$HOME/.nix-profile/etc/profile.d/nix.sh"
+
+# XDG Standards:
+export XDG_CONFIG_HOME="$HOME"/.config
+export XDG_DATA_HOME="$HOME"/.local/share
+export XDG_CACHE_HOME="$HOME"/.cache
+export XDG_STATE_HOME="$HOME"/.local/state
+export XDG_DATA_DIRS="/usr/local/share:/usr/share"
+export XDG_DATA_DIRS="$XDG_DATA_DIRS:/var/lib/flatpak/exports/share"
+export XDG_CONFIG_DIRS=/etc/xdg
+
+# xsession start script
+export USERXSESSION="$XDG_CACHE_HOME"/X11/xsession
+export USERXSESSIONRC="$XDG_CACHE_HOME"/X11/xsessionrc
+export ALTUSERXSESSION="$XDG_CACHE_HOME"/X11/Xsession
+export ERRFILE="$XDG_CACHE_HOME"/X11/.xsession-errors
+
+# Default programs:
+export EDITOR="nvim"
+export TERMINAL="st"
+export BROWSER="firefox-esr"
+
+export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
+#export XINITRC="$XDG_CONFIG_HOME"/x11/xinitrc
+export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" # This line will break some DMs.
+[ -f "$XAUTHORITY" ] || touch "$XAUTHORITY"
+#export NOTMUCH_CONFIG="$XDG_CONFIG_HOME"/notmuch-config
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc-2.0
+export LESSHISTFILE="-"
+export WGETRC="$XDG_CONFIG_HOME"/wget/wgetrc
+export ALSA_CONFIG_PATH="$XDG_CONFIG_HOME/alsa/alsa.conf"
+#export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+export WINEPREFIX="$XDG_DATA_HOME"/wineprefixes/default
+#export PASSWORD_STORE_DIR="$XDG_DATA_HOME"/password-store
+export UNISON="$XDG_DATA_HOME"/unison
+export HISTFILE="$XDG_DATA_HOME"/history
+export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
+export ELECTRUMDIR="$XDG_DATA_HOME"/electrum
+export SCREENRC="$XDG_CONFIG_HOME"/screen/screenrc
+export DICS="/usr/share/stardict/dic/"
+export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
+export NVM_DIR="$XDG_CONFIG_HOME/nvm"
+export NVM_LAZY_LOAD=true
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
+export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+export CONAN_USER_HOME="$XDG_CONFIG_HOME"
+export WINEPREFIX="$XDG_DATA_HOME"/wineprefixes/default
+export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME"/bundle
+export BUNDLE_USER_CACHE="$XDG_CACHE_HOME"/bundle
+export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME"/bundle
+export GOPATH="$XDG_DATA_HOME"/go
+export GTK_THEME=Adwaita:dark
+export NOTES_DIRECTORY="$HOME"/.local/notes
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+export PYLINTHOME="$XDG_CACHE_HOME"/pylint
+export SQLITE_HISTORY="$XDG_DATA_HOME"/sqlite_history
+export GRADLE_USER_HOME="$XDG_DATA_HOME"/gradle
+export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
+export LESS=-R
+export LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"
+export LESS_TERMCAP_md="$(printf '%b' '[1;36m')"
+export LESS_TERMCAP_me="$(printf '%b' '[0m')"
+export LESS_TERMCAP_so="$(printf '%b' '[01;44;33m')"
+export LESS_TERMCAP_se="$(printf '%b' '[0m')"
+export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
+export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
+export LESSOPEN="| $(which highlight) -O ansi %s 2>/dev/null"
+export QT_QPA_PLATFORMTHEME="qt5ct"	# Have QT use gtk2 theme.

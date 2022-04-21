@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/ron/Documents/Note/Info_Technology/Software_and_Code/Unix-like/vim'
+let g:netrw_dirhist_6='/home/ron/Documents/Note/technology/it/cybersec/CTF101/Forensics'
+let g:netrw_dirhist_5='/home/ron'
+let g:netrw_dirhist_4='/home/ron/Documents/Doc'
+let g:netrw_dirhist_3='/home/ron/Documents'
+let g:netrw_dirhist_2='/home/ron'
+let g:netrw_dirhist_1='/home/ron/.config/sxhkd'

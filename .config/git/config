@@ -1,0 +1,11 @@
+[pull]
+	rebase = false
+[user]
+	name = UltronMeltdown
+	email = ultronmeltdown@gmail.com
+[credential "https://github.com"]
+	helper = 
+	helper = !/home/ron/.local/share/anaconda3/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/home/ron/.local/share/anaconda3/bin/gh auth git-credential

@@ -1,0 +1,8 @@
+gtk-icon-theme-name = "Obsidian-Green"
+gtk-theme-name = "DarkMint"
+style "user-font"
+{
+    font_name="Terminus 12"
+}
+widget_class "*" style "user-font"
+gtk-font-name = "Terminus 12"

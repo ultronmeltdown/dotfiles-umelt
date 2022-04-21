@@ -1,0 +1,19 @@
+[Added Associations]
+image/jpeg=ristretto.desktop;
+image/svg+xml=org.inkscape.Inkscape.desktop;ristretto.desktop;
+application/epub+zip=mupdf.desktop;
+text/plain=nvim.desktop;
+image/png=ristretto.desktop;
+application/pdf=ristretto.desktop;
+
+[Default Applications]
+image/jpeg=ristretto.desktop;
+image/svg+xml=org.inkscape.Inkscape.desktop
+text/html=brave-browser.desktop
+x-scheme-handler/about=firefox-esr.desktop
+x-scheme-handler/http=firefox-esr.desktop
+x-scheme-handler/https=firefox-esr.desktop
+x-scheme-handler/unknown=firefox-esr.desktop
+text/plain=nvim.desktop
+application/x-extension-burp=install4j_1l8dpwd-BurpSuiteCommunity.desktop
+image/png=ristretto.desktop

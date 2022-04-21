@@ -1,0 +1,55 @@
+# Reload functions
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# System action
+super + q
+	dpower
+
+# Launch thunar
+super + n; w
+    thunar
+
+# Launch dmenu
+super + d
+	dmenu_run
+
+# Toggle connections
+super + y; {b,w}
+	{togglebluetooth,togglewifi}
+
+# Launch scripts
+super + n; {x,s,b,l,p,t,c,f,m,o}
+	{zsearx,zvia,dblue,dmanless,dmanpdf,shotmaim,clipmenu,dflatpak,xmenu-apps,scratchpad.sh}
+
+# Resync scripts
+super + shift + n; {s,m}
+	{zvia -r,xmenu-apps -u}
+
+# Launch cli programs
+super + n; {v,n,r,e}
+	$TERMINAL {vifmrun $HOME,ncmpcpp,newsboat,$EDITOR}
+
+# VIMRC
+super + n; shift + v
+	$TERMINAL $EDITOR "$XDG_CONFIG_HOME"/nvim/init.vim
+
+# Mpd controls
+super + m; {t,n,p}
+	mpc {toggle,next,prev}
+
+# Mpd search
+super + m; s
+	dmpd
+
+# Volume
+super + ctrl + {9,0}
+    pulsemixer --change-volume {+,-}10
+
+# Brightness
+super + ctrl + {7,8}
+    light -{U,A} 10
+
+# HLWM Script
+super + w
+    hlgaptoggle

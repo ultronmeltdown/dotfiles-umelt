@@ -1,0 +1,5 @@
+prefix=/home/ron/.local/share/npm
+cache=/home/ron/.cache/npm
+tmp=/run/user/1000/npm
+init-module=/home/ron/.config/npm/config/npm-init.js
+store-dir=/home/ron/.local/share/pnpm-store
